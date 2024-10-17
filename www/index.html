@@ -32,6 +32,53 @@
             }
             txt+="a: "+a+"<br>";
             $("#disp2").html(txt);
+            
+            var a = new Array(3);
+            a[0]=10; a[1]=50; a[2]=30;
+            var msg="";
+            for(let i=0; i<a.length; i++) {
+                msg+=i+":"+a[i]+"<br>";
+            }
+            $("#disp2").html(msg);
+
+            var a=[10, "50", 30.3];
+            a.push(4.5);
+            a.unshift("zero");
+            var msg="";
+            for(let i=0; i<a.length; i++) {
+                msg+=i+":"+a[i]+"<br>";
+            }
+            $("#disp2").html(msg);
+
+            let p=a.pop();
+            let s=a.shift();
+            let msg2="";
+            for(let i=0; i<a.length; i++) {
+                msg2+=i+":"+(a[i]+2)+"<br>";
+            }
+            msg2+="p:"+p+"<br>";
+            msg2+="s:"+s+"<br>";
+            $("#disp2").html(msg2);
+
+            let txt1="";
+            let pointA=[5, 2];
+            txt1+="x:"+pointA[0]+",y:"+pointA[1]+"<br>";
+            for(let i=0; i<pointA.length; i++) {
+                pointA[i]+=5;
+            }
+            txt1+="x:"+pointA[0]+",y:"+pointA[1]+"<br>";
+            $("#disp1").html(txt1);
+
+            /*
+            let txt2="";
+            let pointH={x:5, y:2};
+            txt2+="x:"+pointH["x"]+",y:"pointH["y"]+"<br>";
+            for(let ley in pointH) {
+                pointH[key]+=5;
+            }
+            txt2+="x:"+pointH["x"]+",y:"pointH["y"]+"<br>";
+            $("#disp2").html(txt2);
+            */
         }
     </script>
 </head>
